@@ -81,6 +81,12 @@ db_table = db_object.open_table("mytable")
 f = db_table.scan({"name": "john", "password": "apassword"})
 f.__next__()
 ```
+Retrieve all rows in a table:
+```
+db_object = micropydatabase.Database.open("mydb")
+db_table = db_object.open_table("mytable")
+db_table.everything()
+```
 Truncate Table (delete all table contents):
 ```
 db_object = micropydatabase.Database.open("mydb")
